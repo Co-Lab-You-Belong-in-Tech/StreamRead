@@ -1,0 +1,14 @@
+{
+  "name": "Co.Lab Subtitles",
+  "description" : "A subtitle displaying extension",
+  "version": "1",
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "manifest_version": 3,
+  "permissions": [
+    "activeTab",
+    "storage"
+  ]
+}
+
