@@ -2,10 +2,10 @@
   "name": "Streamread",
   "description" : "A subtitle displaying extension",
   "version": "1",
-  "browser_action": {
+  "action": {
     "default_popup": "popup.html"
   },
-  "manifest_version": 2,
+  "manifest_version": 3,
   "permissions": [
     "activeTab",
     "storage"
