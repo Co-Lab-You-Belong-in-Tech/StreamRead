@@ -15,22 +15,35 @@
 // }).catch(console.error)
 
 // Add bubble to the top of the page.
-var bubbleDOM = document.createElement('div');
-bubbleDOM.setAttribute('class', 'search_icon');
-document.body.appendChild(bubbleDOM);
+var searchToggle = document.createElement('div');
+searchToggle.setAttribute('class', 'search_toggle');
+document.body.appendChild(searchToggle);
 
-const icon = chrome.runtime.getURL('assets/Storeicon.png')
+const extIcon = chrome.runtime.getURL('assets/Storeicon.png')
+const searchIcon = chrome.runtime.getURL('assets/Searchicon.svg')
 
 // Lets listen to mousemove DOM events.
 document.addEventListener('mousemove', function (e) {
-  bubbleDOM.style.visibility = 'visible';
+  searchToggle.style.visibility = 'visible';
 }, false);
 
 // document.addEventListener('mousedown', function (e) {
-//   bubbleDOM.style.visibility = 'hidden';
+//   searchToggle.style.visibility = 'hidden';
 // }, false);
 
 
-bubbleDOM.innerHTML = `<div> <button id="search-btn"><img id="search-icon" src="`+icon+`"></button>` +
-                      `</div>`;
+searchToggle.innerHTML = `<div> <button id="search-btn"><img id="ext-icon" src="`+extIcon+`"></button> </div>`;
 
+document.getElementById('ext-icon').onclick = function(event) {
+  searchToggle.innerHTML = `<div id="search-container">
+                             <div id="search-header">
+                                <h1>SEARCH</h1> 
+                                <button id="x-button">X</button></div>
+                              <div id="search-bar">
+                                <form action="/">
+                                  <input type="text" name="search">
+                                  <button type="submit"><img id="search-icon" src="`+searchIcon+`"></button>
+                                </form>
+                              </div>
+                           </div>`
+}

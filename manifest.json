@@ -1,5 +1,5 @@
 {
-  "name": "Streamread",
+  "name": "StreamRead",
   "description" : "A subtitle displaying extension",
   "version": "1",
   "action": {
@@ -22,7 +22,7 @@
   ],
   "web_accessible_resources": [
     {
-    "resources": ["assets/*"],
+    "resources": ["assets/*", "*.ttf", "*.woff2"],
     "matches": ["<all_urls>"]
     }
   ]
