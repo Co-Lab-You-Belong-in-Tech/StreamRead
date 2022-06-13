@@ -6,22 +6,24 @@
   </head>
 
     <body>
-    <h3>Configuration</h3>
-    <form id="subtitleFileForm">
-        <input id="subtitleFileInput" type="file" name="text" accept=".srt,.ssa,.ass" value="new file">
-        <input type="submit" value="submit"> <label id="submitStatus"></label>
-    </form>
-    <label>Offset seconds:
-        <br/>
-        <input type="text" id="offset">
-        <button id="offsetButton">OK</button>
-        <br/> </label>
-    <label>Refresh intervals (ms):
-        <br/>
-        <input type="text" id="refreshInterval">
-        <button id="refreshIntervalButton">OK</button>
-        <br/> </label>
-    <button id="reset">Reset</button>
+      <div class="wrapper">
+        <h1>SETTINGS</h1>
+        <form id="subtitleFileForm">
+            <input id="subtitleFileInput" type="file" name="text" accept=".srt,.ssa,.ass" value="new file">
+            <input type="submit" value="submit"> <label id="submitStatus"></label>
+        </form>
+        <label>Offset seconds:
+            <br/>
+            <input type="text" id="offset">
+            <button id="offsetButton">OK</button>
+            <br/> </label>
+        <label>Refresh intervals (ms):
+            <br/>
+            <input type="text" id="refreshInterval">
+            <button id="refreshIntervalButton">OK</button>
+            <br/> </label>
+        <button id="reset">Reset</button>
+      </div>
     <script src="popup.js"></script>
 
 

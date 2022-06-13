@@ -37,7 +37,7 @@ body {
   border-radius: 2px;
 }
 
-.open-search-btn {
+button.open-search-btn {
   cursor: pointer;
   text-decoration: none;
   border: none;

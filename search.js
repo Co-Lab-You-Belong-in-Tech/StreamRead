@@ -32,7 +32,7 @@ document.addEventListener('mousemove', function (e) {
 // }, false);
 
 
-searchToggle.innerHTML = `<div> <button id="open-search-btn"><img id="ext-icon" src="`+extIcon+`"></button> </div>`;
+var defaultToggle = searchToggle.innerHTML = `<div> <button id="open-search-btn"><img id="ext-icon" src="`+extIcon+`"></button> </div>`;
 
 document.getElementById('ext-icon').onclick = function(e) {
   searchToggle.innerHTML = `<div class="search-container">
@@ -49,8 +49,8 @@ document.getElementById('ext-icon').onclick = function(e) {
                                 </div>
                               </div>
                            </div>`
-}
-
-document.getElementById('x-button').onclick = function(e) {
-  searchToggle.style.visibility = 'hidden'
+                        
+  // document.getElementById('x-button').onclick = function(e) {
+  //   searchToggle.innerHTML = defaultToggle
+  // }          
 }

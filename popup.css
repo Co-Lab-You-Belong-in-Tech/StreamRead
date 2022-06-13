@@ -17,6 +17,20 @@
   src: url('assets/Inter/static/Inter-Regular.ttf');
 }
 
+h1 {
+  font-family: HandjetBold;
+  font-size: 40px;
+}
+
 body {
-  font-family: HandjetBold, HandjetRed, Inter;
+  font-family: HandjetReg;
+  background-color: #EEEAEA;
+  border: 3px solid black;
+  border-radius: 2px;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  padding: 5px;
 }
