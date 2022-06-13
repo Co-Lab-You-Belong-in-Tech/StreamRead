@@ -32,18 +32,25 @@ document.addEventListener('mousemove', function (e) {
 // }, false);
 
 
-searchToggle.innerHTML = `<div> <button id="search-btn"><img id="ext-icon" src="`+extIcon+`"></button> </div>`;
+searchToggle.innerHTML = `<div> <button id="open-search-btn"><img id="ext-icon" src="`+extIcon+`"></button> </div>`;
 
-document.getElementById('ext-icon').onclick = function(event) {
-  searchToggle.innerHTML = `<div id="search-container">
-                             <div id="search-header">
+document.getElementById('ext-icon').onclick = function(e) {
+  searchToggle.innerHTML = `<div class="search-container">
+                             <div class="search-header">
                                 <h1>SEARCH</h1> 
-                                <button id="x-button">X</button></div>
-                              <div id="search-bar">
-                                <form action="/">
-                                  <input type="text" name="search">
-                                  <button type="submit"><img id="search-icon" src="`+searchIcon+`"></button>
-                                </form>
+                                <button id="x-button">X</button>
+                              </div>
+                              <div class="wrap">
+                                <div class="search">
+                                  <input type="text" class="searchTerm">
+                                  <button type="submit" class="searchButton">
+                                    <img id="search-icon" src="`+searchIcon+`" height='30'width='30' class="filter-white">
+                                  </button>
+                                </div>
                               </div>
                            </div>`
+}
+
+document.getElementById('x-button').onclick = function(e) {
+  searchToggle.style.visibility = 'hidden'
 }
