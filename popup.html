@@ -29,14 +29,14 @@
 
         <div id="systemSettings">
 
-          <label id="offsetWrap">OFFSET (SEC):
+          <label id="offsetWrap">OFFSET:
             <span>
               <input type="text" id="offset">
               <button id="offsetButton">✓</button>
             </span>
           </label>
 
-          <label id="refreshWrap">REFRESH INT (MS):
+          <label id="refreshWrap">REFRESH:
             <span>
               <input type="text" id="refreshInterval">
               <button id="refreshIntervalButton">✓</button>
@@ -50,12 +50,17 @@
         <!--------------- DEFAULT SETTINGS ------------------>
         <h3>DEFAULTS</h3>
 
-        <form>
+        <form id="languageSettings">
           <label>LANGUAGE:</label>
           <select id="sub-languages" name="sub-languages">
             <option value="eng">EN</option>
+            <option value="spa">ES</option>
+            <option value="fre">FR</option>
+            <option value="jpn">JA</option>
+            <option value="all">ALL</option>
           </select>
         </form>
+
       </div>
     <script src="popup.js"></script>
 

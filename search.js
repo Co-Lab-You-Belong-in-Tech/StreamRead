@@ -25,9 +25,9 @@ document.getElementById('ext-icon').onclick = function(e) {
                                 <button id="x-button">X</button>
                               </div>
                               <div class="wrap">
-                                <form id="search" action="">
+                                <form id="search" action="" formtarget="_blank">
                                   <input type="text" id="searchTerm">
-                                  <button type="submit" id="searchButton" target="_blank">
+                                  <button type="submit" id="searchButton" formtarget="_blank">
                                     <img id="search-icon" src="`+searchIcon+`" height='30'width='30' class="filter-white">
                                   </button>
                                 </form>
