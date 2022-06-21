@@ -55,7 +55,8 @@ input[type="file"] {
   bottom: 100%;
 }
 
-.custom-upload {
+.custom-upload, input#submit-btn {
+  font-family: HandjetBold;
   background-color: #DB3069;
   color: white;
   border: 2px solid black;
@@ -74,13 +75,22 @@ form {
   /* text-align: center; */
 }
 
-#uploadFileDisplay {
+#uploadFileDisplay, #submitBtnDisplay {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
 }
 
-label {
+label, span#file-selected {
   font-size: 20px;
+}
+
+input#submit-btn { 
+  font-size: 20px;
+  width: 102px;
+}
+
+#subtitleFileForm {
+  margin-bottom: 0;
 }

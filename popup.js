@@ -6,7 +6,7 @@
 function readFile(file){
     const reader = new FileReader();
     reader.onload = (event) => {
-        document.getElementById('submitStatus').innerText = "Success!";
+        document.getElementById('submitStatus').innerText = "SUCCESS!";
 
         //load content.js and start subtitle processing
         chrome.tabs.executeScript(
