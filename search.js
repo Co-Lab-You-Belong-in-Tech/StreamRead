@@ -1,18 +1,3 @@
-// import dotenv from 'dotenv';
-// dotenv.config();
-// const OS = require('opensubtitles.com')
-// const os = new OS({apikey: process.env.API_KEY})
-
-// os.subtitle({
-//   query: 'Steal this film 2006',
-// }).then((response) => {
-//   /* response {
-//     total_pages: 1,
-//     total_count: 13,
-//     page: 1,
-//     data: <SUBTITLES LIST>
-//   } */
-// }).catch(console.error)
 
 // Add bubble to the top of the page.
 var searchToggle = document.createElement('div');
@@ -31,26 +16,34 @@ document.addEventListener('mousemove', function (e) {
 //   searchToggle.style.visibility = 'hidden';
 // }, false);
 
-
-searchToggle.innerHTML = `<div> <button id="open-search-btn"><img id="ext-icon" src="`+extIcon+`"></button> </div>`;
+var defaultToggle = searchToggle.innerHTML = `<div> <button id="open-search-btn"><img id="ext-icon" src="`+extIcon+`"></button> </div>`;
 
 document.getElementById('ext-icon').onclick = function(e) {
   searchToggle.innerHTML = `<div class="search-container">
                              <div class="search-header">
-                                <h1>SEARCH</h1> 
+                                <h1 id="search-title">SEARCH</h1> 
                                 <button id="x-button">X</button>
                               </div>
                               <div class="wrap">
-                                <div class="search">
-                                  <input type="text" class="searchTerm">
-                                  <button type="submit" class="searchButton">
+                                <form id="search" action="" formtarget="_blank">
+                                  <input type="text" id="searchTerm">
+                                  <button type="submit" id="searchButton" formtarget="_blank">
                                     <img id="search-icon" src="`+searchIcon+`" height='30'width='30' class="filter-white">
                                   </button>
-                                </div>
+                                </form>
                               </div>
                            </div>`
-}
 
-document.getElementById('x-button').onclick = function(e) {
-  searchToggle.style.visibility = 'hidden'
+    var searchForm = document.getElementById("search")
+    var searchInput = document.getElementById("searchTerm")
+
+    searchForm.onsubmit = function(e) {
+      location = "https://www.opensubtitles.org/en/search2/sublanguageid-all/moviename-"
+                  + encodeURIComponent(searchInput.value)
+      return false
+    }
+                        
+    document.getElementById('x-button').onclick = function(e) {
+      searchToggle.innerHTML = defaultToggle
+    }          
 }

@@ -37,11 +37,17 @@ body {
   border-radius: 2px;
 }
 
-.open-search-btn {
+button#open-search-btn {
   cursor: pointer;
   text-decoration: none;
   border: none;
   background-color: transparent;
+  opacity: 0.5;
+  transition: 0.3s;
+}
+
+button#open-search-btn:hover {
+  opacity: 1.0;
 }
 
 .search-container {
@@ -53,9 +59,12 @@ body {
 }
 
 /* for some reason the font breaks if i try to set multiple elements at the same time */
-.search-header h1 {
+h1#search-title {
   font-family: HandjetBold;
+  font-weight: 900;
   font-size: 30px;
+  margin: 0;
+  color: black;
 }
 
 button#x-button {
@@ -83,13 +92,13 @@ button#x-button {
   padding: 3px;
 }
 
-.search {
+#search {
   width: 100%;
   /* position: relative; */
   display: flex;
 }
 
-.searchTerm {
+#searchTerm {
   width: 100%;
   border: 2px solid black;
   border-right: none;
@@ -100,12 +109,12 @@ button#x-button {
   color: #FAFAFA;
 }
 
-.searchTerm:focus{
+#searchTerm:focus{
   color: black;
   font-family: Inter;
 }
 
-.searchButton {
+#searchButton {
   width: 50px;
   height: 36px;
   border: 2px solid black;
