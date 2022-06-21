@@ -31,7 +31,6 @@ document.addEventListener('mousemove', function (e) {
 //   searchToggle.style.visibility = 'hidden';
 // }, false);
 
-
 var defaultToggle = searchToggle.innerHTML = `<div> <button id="open-search-btn"><img id="ext-icon" src="`+extIcon+`"></button> </div>`;
 
 document.getElementById('ext-icon').onclick = function(e) {
@@ -41,16 +40,25 @@ document.getElementById('ext-icon').onclick = function(e) {
                                 <button id="x-button">X</button>
                               </div>
                               <div class="wrap">
-                                <div class="search">
-                                  <input type="text" class="searchTerm">
-                                  <button type="submit" class="searchButton">
+                                <form id="search" action="">
+                                  <input type="text" id="searchTerm">
+                                  <button type="submit" id="searchButton" target="_blank">
                                     <img id="search-icon" src="`+searchIcon+`" height='30'width='30' class="filter-white">
                                   </button>
-                                </div>
+                                </form>
                               </div>
                            </div>`
+
+    var searchForm = document.getElementById("search")
+    var searchInput = document.getElementById("searchTerm")
+
+    searchForm.onsubmit = function(e) {
+      location = "https://www.opensubtitles.org/en/search2/sublanguageid-all/moviename-"
+                  + encodeURIComponent(searchInput.value)
+      return false
+    }
                         
-  // document.getElementById('x-button').onclick = function(e) {
-  //   searchToggle.innerHTML = defaultToggle
-  // }          
+    document.getElementById('x-button').onclick = function(e) {
+      searchToggle.innerHTML = defaultToggle
+    }          
 }
