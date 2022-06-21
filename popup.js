@@ -88,3 +88,22 @@ chrome.storage.local.get(['refreshInterval'], function(result) {
     document.getElementById('refreshInterval').value = result.refreshInterval;
 });
 
+function trimFileName(str, noOfChars, appendix) {
+  let nameArray = str.split(".");
+  let fileType = `.${nameArray.pop()}`;
+  let fileName = nameArray.join(" ");
+
+  if (fileName.length >= noOfChars) {
+    fileName = fileName.substr(0, noOfChars) + appendix;
+  };
+
+  return (fileName + fileType);
+}
+
+document.getElementById("subtitleFileInput").addEventListener("change", showName)
+
+function showName() {
+  var name = document.getElementById('subtitleFileInput')
+  var fileName = trimFileName(name.files.item(0).name, 20, "...")
+  document.getElementById("file-selected").innerHTML = fileName;
+}

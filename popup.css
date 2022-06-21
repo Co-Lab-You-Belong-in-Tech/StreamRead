@@ -2,7 +2,7 @@
   font-family: HandjetBold;
   src: url('/assets/handjet/fonts/Handjet[EGRD\,ESHP\,wght].ttf') format('truetype'),
        url('/assets/handjet/fonts/Handjet[EGRD\,ESHP\,wght].woff2') format('woff2-variations');
-  font-variation-settings: 'wght' 800, 'EGRD' 1, 'ESHP' 2;
+  font-variation-settings: 'wght' 900, 'EGRD' 1, 'ESHP' 2;
 }
 
 @font-face {
@@ -20,17 +20,67 @@
 h1 {
   font-family: HandjetBold;
   font-size: 40px;
+  padding-left: 5px;
+}
+
+h3 {
+  font-size: 28px;
+  border: solid black 2px;
+  padding-left: 3px;
+}
+
+h1, h3 {
+  background-color: #F1B9CC;
+  margin-top: 0;
+  margin-bottom: 5px;
 }
 
 body {
-  font-family: HandjetReg;
+  font-family: HandjetReg !important;
   background-color: #EEEAEA;
   border: 3px solid black;
   border-radius: 2px;
   margin: 0;
   padding: 0;
+  width: 280px;
 }
 
 .wrapper {
   padding: 5px;
+}
+
+input[type="file"] {
+  position: fixed;
+  right: 100%;
+  bottom: 100%;
+}
+
+.custom-upload {
+  background-color: #DB3069;
+  color: white;
+  border: 2px solid black;
+  border-radius: 2px;
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items:flex-start;
+  justify-content: space-between;
+  /* text-align: center; */
+}
+
+#uploadFileDisplay {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+label {
+  font-size: 20px;
 }

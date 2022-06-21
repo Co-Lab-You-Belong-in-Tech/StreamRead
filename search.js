@@ -1,18 +1,3 @@
-// import dotenv from 'dotenv';
-// dotenv.config();
-// const OS = require('opensubtitles.com')
-// const os = new OS({apikey: process.env.API_KEY})
-
-// os.subtitle({
-//   query: 'Steal this film 2006',
-// }).then((response) => {
-//   /* response {
-//     total_pages: 1,
-//     total_count: 13,
-//     page: 1,
-//     data: <SUBTITLES LIST>
-//   } */
-// }).catch(console.error)
 
 // Add bubble to the top of the page.
 var searchToggle = document.createElement('div');
@@ -36,7 +21,7 @@ var defaultToggle = searchToggle.innerHTML = `<div> <button id="open-search-btn"
 document.getElementById('ext-icon').onclick = function(e) {
   searchToggle.innerHTML = `<div class="search-container">
                              <div class="search-header">
-                                <h1>SEARCH</h1> 
+                                <h1 id="search-title">SEARCH</h1> 
                                 <button id="x-button">X</button>
                               </div>
                               <div class="wrap">
