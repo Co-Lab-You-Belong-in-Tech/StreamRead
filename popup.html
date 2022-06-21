@@ -8,7 +8,9 @@
     <body>
       <div class="wrapper">
         <h1>SETTINGS</h1>
+        <!--------------- UPLOAD SETTINGS ------------------>
         <h3>UPLOAD</h3>
+
         <form id="subtitleFileForm">
             <div id="uploadFileDisplay">
               <label class="custom-upload">
@@ -21,19 +23,33 @@
               <input type="submit" value="SUBMIT" id="submit-btn"> <label id="submitStatus"></label>
             </div>
         </form>
+
+        <!--------------- SYSTEM SETTINGS ------------------>
         <h3>SYSTEM</h3>
-        <label>OFFSET SECONDS:
-            <br/>
-            <input type="text" id="offset">
-            <button id="offsetButton">OK</button>
-            <br/> </label>
-        <label>REFRESH INTERVALS (MS):
-            <br/>
-            <input type="text" id="refreshInterval">
-            <button id="refreshIntervalButton">OK</button>
-            <br/> </label>
-        <button id="reset">Reset</button>
+
+        <div id="systemSettings">
+
+          <label id="offsetWrap">OFFSET (SEC):
+            <span>
+              <input type="text" id="offset">
+              <button id="offsetButton">✓</button>
+            </span>
+          </label>
+
+          <label id="refreshWrap">REFRESH INT (MS):
+            <span>
+              <input type="text" id="refreshInterval">
+              <button id="refreshIntervalButton">✓</button>
+            </span>
+          </label>
+
+          <button id="reset">RESET</button>
+
+        </div>
+        
+        <!--------------- DEFAULT SETTINGS ------------------>
         <h3>DEFAULTS</h3>
+
         <form>
           <label>LANGUAGE:</label>
           <select id="sub-languages" name="sub-languages">

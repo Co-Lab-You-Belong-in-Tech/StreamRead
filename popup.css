@@ -55,7 +55,7 @@ input[type="file"] {
   bottom: 100%;
 }
 
-.custom-upload, input#submit-btn {
+.custom-upload, input#submit-btn, button#reset {
   font-family: HandjetBold;
   background-color: #DB3069;
   color: white;
@@ -65,6 +65,7 @@ input[type="file"] {
   padding: 6px 12px;
   cursor: pointer;
   margin-bottom: 5px;
+  font-size: 20px;
 }
 
 form {
@@ -82,15 +83,58 @@ form {
   width: 100%;
 }
 
-label, span#file-selected {
-  font-size: 20px;
+label {
+  font-size: 26px;
 }
 
 input#submit-btn { 
-  font-size: 20px;
   width: 102px;
 }
 
 #subtitleFileForm {
   margin-bottom: 0;
+}
+
+span#file-selected {
+  font-size: 20px;
+}
+
+input#offset, input#refreshInterval {
+  width: 46px;
+  height: 30px;
+  border: solid black 2px;
+  padding: 3px 6px;
+  border-radius: 2px;
+  font-family: Inter;
+}
+
+button#refreshIntervalButton, button#offsetButton {
+  font-family: HandjetBold;
+  background-color: #DB3069;
+  color: white;
+  border: 2px solid black;
+  border-radius: 2px;
+  padding: 3px 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#offsetWrap, #refreshWrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#systemSettings {
+  display: flex;
+  flex-direction: column;
+}
+
+#reset {
+  display: flex;
+  flex-direction: row;
+  align-self: flex-end;
+  margin-top: 5px;
+  width: 80px;
 }

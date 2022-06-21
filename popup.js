@@ -104,6 +104,6 @@ document.getElementById("subtitleFileInput").addEventListener("change", showName
 
 function showName() {
   var name = document.getElementById('subtitleFileInput')
-  var fileName = trimFileName(name.files.item(0).name, 20, "...")
+  var fileName = trimFileName(name.files.item(0).name, 18, "...")
   document.getElementById("file-selected").innerHTML = fileName;
 }
