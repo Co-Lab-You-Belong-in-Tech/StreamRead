@@ -1,0 +1,141 @@
+@font-face {
+  font-family: HandjetBold;
+  src: url('/assets/handjet/fonts/Handjet[EGRD\,ESHP\,wght].ttf') format('truetype'),
+       url('/assets/handjet/fonts/Handjet[EGRD\,ESHP\,wght].woff2') format('woff2-variations');
+  font-variation-settings: 'wght' 900, 'EGRD' 1, 'ESHP' 2;
+}
+
+@font-face {
+  font-family: HandjetReg;
+  src: url('/assets/handjet/fonts/Handjet[EGRD\,ESHP\,wght].ttf') format('truetype'),
+       url('/assets/handjet/fonts/Handjet[EGRD\,ESHP\,wght].woff2') format('woff2-variations');
+  font-variation-settings: 'wght' 500, 'EGRD' 1, 'ESHP' 2;
+}
+
+@font-face {
+  font-family: Inter;
+  src: url('assets/Inter/static/Inter-Regular.ttf');
+}
+
+h1 {
+  font-family: HandjetBold;
+  font-size: 40px;
+  padding-left: 5px;
+}
+
+h3 {
+  font-size: 28px;
+  border: solid black 2px;
+  padding-left: 3px;
+}
+
+h1, h3 {
+  background-color: #F1B9CC;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+body {
+  font-family: HandjetReg !important;
+  background-color: #EEEAEA;
+  border: 3px solid black;
+  border-radius: 2px;
+  margin: 0;
+  padding: 0;
+  width: 230px;
+}
+
+.wrapper {
+  padding: 5px;
+  margin-bottom: 0;
+}
+
+input[type="file"] {
+  position: fixed;
+  right: 100%;
+  bottom: 100%;
+}
+
+.custom-upload, input#submit-btn, button#reset {
+  font-family: HandjetBold;
+  background-color: #DB3069;
+  color: white;
+  border: 2px solid black;
+  border-radius: 2px;
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items:flex-start;
+  justify-content: space-between;
+  /* text-align: center; */
+}
+
+#uploadFileDisplay, #submitBtnDisplay {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+label {
+  font-size: 26px;
+}
+
+input#submit-btn { 
+  width: 102px;
+}
+
+#subtitleFileForm, #languageSettings {
+  margin-bottom: 0;
+}
+
+span#file-selected {
+  font-size: 16px;
+}
+
+input#offset, input#refreshInterval, select#sub-languages {
+  width: 60px;
+  height: 30px;
+  border: solid black 2px;
+  padding: 3px 6px;
+  border-radius: 2px;
+  font-family: Inter;
+}
+
+button#refreshIntervalButton, button#offsetButton {
+  font-family: HandjetBold;
+  background-color: #DB3069;
+  color: white;
+  border: 2px solid black;
+  border-radius: 2px;
+  padding: 3px 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#offsetWrap, #refreshWrap, #languageSettings {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#systemSettings {
+  display: flex;
+  flex-direction: column;
+}
+
+#reset {
+  display: flex;
+  flex-direction: row;
+  align-self: flex-end;
+  margin-top: 5px;
+  width: 80px;
+}

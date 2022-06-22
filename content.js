@@ -189,6 +189,17 @@ subtitlextObj.setup =function() {
                 return subtitlextObj.timeContainer.currentTime;
             };
     }
+    // else if (window.location.href.indexOf("netflix.com") > -1) { // Netflix
+    //   //append display box
+    //   document.getElementsByClassName('watch-video--player-view')[0].appendChild(subtitlextObj.subtitleContainer);
+    //   //bind time container to read time
+    //   subtitlextObj.timeContainer = document.getElementsByTagName('video')[1];
+    //   //read time function
+    //   subtitlextObj.getCurrentTimeFunc =
+    //       () => {
+    //           return subtitlextObj.timeContainer.currentTime;
+    //       };
+    // }
     else if (window.location.href.indexOf("www.crunchyroll.com") > -1){ // Crunchyroll configuration
         //note for dev: manually creating a subtitle display box in Chrome console and
         //  appending it in crunchyroll.com will not work -- clicking the box will make the page
@@ -289,7 +300,7 @@ subtitlextObj.getOrCreateDisplayBox = function () {
         `style="cursor: move; position: absolute; z-index:999; color: rgb(255, 255, 255); ` +
         `padding-left: 10px; padding-right: 10px; ` +
         `font-family: Arial; font-size: 28px; text-shadow: rgba(0, 0, 0, 0.75) 2px 2px 3px; ` +
-        `background-color: rgba(0, 0, 0, 0.5); overflow: visible; display: ; left: 100px; top: 75px; ">` +
+        `background-color: rgba(0, 0, 0, 0.5); overflow: visible; display: ; left: 50%; top: 80%; ">` +
         `<p style="text-align:center; ">subtitlext</p>  </div>`;
     displayer = displayer.firstElementChild;
 
@@ -331,3 +342,11 @@ subtitlextObj.getOrCreateDisplayBox = function () {
 
     return displayer;
 };
+
+chrome.runtime.onMessage.addListener(
+  function(request, sender, sendResponse) {
+      if (request.requested == "createDiv"){
+          //Code to create the div
+          sendResponse({confirmation: "Successfully created div"});
+      }
+  });

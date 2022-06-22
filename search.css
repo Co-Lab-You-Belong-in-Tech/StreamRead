@@ -1,0 +1,126 @@
+@font-face {
+  font-family: HandjetBold;
+  src: url('chrome-extension://__MSG_@@extension_id__/assets/handjet/fonts/Handjet[EGRD\,ESHP\,wght].ttf') format('truetype'),
+       url('chrome-extension://__MSG_@@extension_id__/assets/handjet/fonts/Handjet[EGRD\,ESHP\,wght].woff2') format('woff2-variations');
+  font-variation-settings: 'wght' 900, 'EGRD' 1, 'ESHP' 2;
+}
+
+@font-face {
+  font-family: HandjetReg;
+  src: url('chrome-extension://__MSG_@@extension_id__/assets/handjet/fonts/Handjet[EGRD\,ESHP\,wght].ttf') format('truetype'),
+       url('/assets/handjet/fonts/Handjet[EGRD\,ESHP\,wght].woff2') format('woff2-variations');
+  font-variation-settings: 'wght' 500, 'EGRD' 1, 'ESHP' 2;
+}
+
+@font-face {
+  font-family: Inter;
+  src: url('chrome-extension://__MSG_@@extension_id__/assets/Inter/static/Inter-Regular.ttf');
+}
+
+.search_toggle {
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 30px;
+  z-index: 999;
+}
+
+#ext-icon {
+  width: 50px;
+  height: 50px;
+  border: solid black 3px;
+  border-radius: 2px;
+}
+
+button#open-search-btn {
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+  background-color: transparent;
+  opacity: 0.5;
+  transition: 0.3s;
+}
+
+button#open-search-btn:hover {
+  opacity: 1.0;
+}
+
+.search-container {
+  background-color: #eeeaea;
+  padding: 3px;
+  border: solid black 3px;
+  border-radius: 2px;
+  width: 200px;
+}
+
+/* for some reason the font breaks if i try to set multiple elements at the same time */
+h1#search-title {
+  font-family: HandjetBold;
+  font-weight: 900;
+  font-size: 30px;
+  margin: 0;
+  color: black;
+}
+
+button#x-button {
+  font-family: HandjetBold;
+  font-size: 30px;
+  color: white;
+  background-color: #DB3069;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  border: black solid 2px;
+  border-radius: 2px;
+  padding: 0px;
+  line-height: 15px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.search-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #F1B9CC;
+  margin-bottom: 5px;
+  padding: 3px;
+}
+
+#search {
+  width: 100%;
+  /* position: relative; */
+  display: flex;
+}
+
+#searchTerm {
+  width: 100%;
+  border: 2px solid black;
+  border-right: none;
+  padding: 5px;
+  height: 22px;
+  border-radius: 2px 0 0 2px;
+  outline: none;
+  color: #FAFAFA;
+}
+
+#searchTerm:focus{
+  color: black;
+  font-family: Inter;
+}
+
+#searchButton {
+  width: 50px;
+  height: 36px;
+  border: 2px solid black;
+  background: #DB3069;
+  text-align: center;
+  border-radius: 0 2px 2px 0;
+  cursor: pointer;
+  /* font-size: 20px; */
+}
+
+.filter-white{
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(36deg) brightness(102%) contrast(106%);
+}

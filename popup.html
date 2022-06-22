@@ -1,28 +1,68 @@
 <html>
   <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title> Co.Lab Subtitles </title>
+      <title> StreamRead </title>
+      <link rel="stylesheet" href="popup.css">
   </head>
 
     <body>
-    <h3>Configuration</h3>
-    <form id="subtitleFileForm">
-        <input id="subtitleFileInput" type="file" name="text" accept=".srt,.ssa,.ass" value="new file">
-        <input type="submit" value="submit"> <label id="submitStatus"></label>
-    </form>
-    <label>Offset seconds:
-        <br/>
-        <input type="text" id="offset">
-        <button id="offsetButton">OK</button>
-        <br/> </label>
-    <label>Refresh intervals (ms):
-        <br/>
-        <input type="text" id="refreshInterval">
-        <button id="refreshIntervalButton">OK</button>
-        <br/> </label>
-    <button id="reset">Reset</button>
-    <script src="popup.js"></script>
+      <div class="wrapper">
+        <h1>SETTINGS</h1>
+        <!--------------- UPLOAD SETTINGS ------------------>
+        <h3>UPLOAD</h3>
 
+        <form id="subtitleFileForm">
+            <div id="uploadFileDisplay">
+              <label class="custom-upload">
+                <input id="subtitleFileInput" type="file" name="text" accept=".srt,.ssa,.ass" value="new file">
+                CHOOSE FILE
+              </label>
+              <span id="file-selected"></span>
+            </div>
+            <div id="submitBtnDisplay">
+              <input type="submit" value="SUBMIT" id="submit-btn"> <label id="submitStatus"></label>
+            </div>
+        </form>
+
+        <!--------------- SYSTEM SETTINGS ------------------>
+        <h3>SYSTEM</h3>
+
+        <div id="systemSettings">
+
+          <label id="offsetWrap">OFFSET:
+            <span>
+              <input type="text" id="offset">
+              <button id="offsetButton">✓</button>
+            </span>
+          </label>
+
+          <label id="refreshWrap">REFRESH:
+            <span>
+              <input type="text" id="refreshInterval">
+              <button id="refreshIntervalButton">✓</button>
+            </span>
+          </label>
+
+          <button id="reset">RESET</button>
+
+        </div>
+        
+        <!--------------- DEFAULT SETTINGS ------------------>
+        <h3>DEFAULTS</h3>
+
+        <form id="languageSettings">
+          <label>LANGUAGE:</label>
+          <select id="sub-languages" name="sub-languages">
+            <option value="eng">EN</option>
+            <option value="spa">ES</option>
+            <option value="fre">FR</option>
+            <option value="jpn">JA</option>
+            <option value="all">ALL</option>
+          </select>
+        </form>
+
+      </div>
+    <script src="popup.js"></script>
 
     </body>
 
