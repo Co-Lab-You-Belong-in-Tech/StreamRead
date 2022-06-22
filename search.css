@@ -17,10 +17,6 @@
   src: url('chrome-extension://__MSG_@@extension_id__/assets/Inter/static/Inter-Regular.ttf');
 }
 
-body {
-  font-family: HandjetBold, HandjetRed, Inter;
-}
-
 .search_toggle {
   visibility: hidden;
   position: fixed;

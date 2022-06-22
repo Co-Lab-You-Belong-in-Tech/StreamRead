@@ -42,11 +42,12 @@ body {
   border-radius: 2px;
   margin: 0;
   padding: 0;
-  width: 280px;
+  width: 230px;
 }
 
 .wrapper {
   padding: 5px;
+  margin-bottom: 0;
 }
 
 input[type="file"] {
@@ -96,7 +97,7 @@ input#submit-btn {
 }
 
 span#file-selected {
-  font-size: 20px;
+  font-size: 16px;
 }
 
 input#offset, input#refreshInterval, select#sub-languages {

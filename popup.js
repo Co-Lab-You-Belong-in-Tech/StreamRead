@@ -2,38 +2,37 @@
 
 "use strict";
 
-
 function readFile(file){
-    const reader = new FileReader();
-    reader.onload = (event) => {
-        document.getElementById('submitStatus').innerText = "SUCCESS!";
+  const reader = new FileReader();
+  reader.onload = (event) => {
+      document.getElementById('submitStatus').innerText = "Success!";
 
-        //load content.js and start subtitle processing
-        chrome.tabs.executeScript(
-            {
-                file:"content.js"
-            },
-            ()=>{
-                if(file.name.toLowerCase().endsWith('.srt')) {
-                    chrome.tabs.executeScript({
-                        code: "subtitlextObj.lines=subtitlextObj.parseSRT(`" + event.target.result + "`);" +
-                        "subtitlextObj.setup();" +
-                        "subtitlextObj.start();"
-                    });
-                }
-                else if( file.name.toLowerCase().endsWith('.ssa') || file.name.toLowerCase().endsWith('.ass') ){
-                    chrome.tabs.executeScript({
-                        code: "subtitlextObj.lines=subtitlextObj.parseSSA(`" +
-                        event.target.result.replace(/\\/g,'\\\\') + "`);" +  //.ssa/.ass can contain "\n" "{\...}"
-                        "subtitlextObj.setup();" +
-                        "subtitlextObj.start();"
-                    });
-                }
-            }
-        );
-    }; // desired file content
-    reader.onerror = error => {console.log(error)};
-    reader.readAsText(file);
+      //load content.js and start subtitle processing
+      chrome.tabs.executeScript(
+          {
+              file:"content.js"
+          },
+          ()=>{
+              if(file.name.toLowerCase().endsWith('.srt')) {
+                  chrome.tabs.executeScript({
+                      code: "subtitlextObj.lines=subtitlextObj.parseSRT(`" + event.target.result + "`);" +
+                      "subtitlextObj.setup();" +
+                      "subtitlextObj.start();"
+                  });
+              }
+              else if( file.name.toLowerCase().endsWith('.ssa') || file.name.toLowerCase().endsWith('.ass') ){
+                  chrome.tabs.executeScript({
+                      code: "subtitlextObj.lines=subtitlextObj.parseSSA(`" +
+                      event.target.result.replace(/\\/g,'\\\\') + "`);" +  //.ssa/.ass can contain "\n" "{\...}"
+                      "subtitlextObj.setup();" +
+                      "subtitlextObj.start();"
+                  });
+              }
+          }
+      );
+  }; // desired file content
+  reader.onerror = error => {console.log(error)};
+  reader.readAsText(file);
 }
 
 
@@ -104,6 +103,6 @@ document.getElementById("subtitleFileInput").addEventListener("change", showName
 
 function showName() {
   var name = document.getElementById('subtitleFileInput')
-  var fileName = trimFileName(name.files.item(0).name, 18, "...")
+  var fileName = trimFileName(name.files.item(0).name, 12, "...")
   document.getElementById("file-selected").innerHTML = fileName;
 }
