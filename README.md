@@ -17,7 +17,7 @@ StreamRead is a Chrome extension, built to search and display subtitles in any l
 
 ## How to Use
 
-[Download .zip](https://streamread.netlify.app/)
+[Download .zip here](https://streamread.netlify.app/)
 
 Navigate to:
 
