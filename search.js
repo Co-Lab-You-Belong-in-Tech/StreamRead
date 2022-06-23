@@ -38,8 +38,8 @@ document.getElementById('ext-icon').onclick = function(e) {
     var searchInput = document.getElementById("searchTerm")
 
     searchForm.onsubmit = function(e) {
-      location = "https://www.opensubtitles.org/en/search2/sublanguageid-all/moviename-"
-                  + encodeURIComponent(searchInput.value)
+      location = window.open("https://www.opensubtitles.org/en/search2/sublanguageid-all/moviename-"
+                  + encodeURIComponent(searchInput.value))
       return false
     }
                         
