@@ -3,7 +3,7 @@
 StreamRead is a Chrome extension, built to search and display subtitles in any language, over any video player. StreamRead supports .srt, .ssa, and .ass files.
 
 
-## Created By
+## Team
 
 - Software Developer - [Anneka Curry](https://www.github.com/nekacurry)
 - Product Manager - [Alexis Whitaker](https://www.linkedin.com/in/alexis-whitaker/)
