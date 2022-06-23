@@ -38,7 +38,7 @@ document.getElementById('ext-icon').onclick = function(e) {
     var searchInput = document.getElementById("searchTerm")
 
     searchForm.onsubmit = function(e) {
-      location = window.open("https://www.opensubtitles.org/en/search2/sublanguageid-all/moviename-"
+      location = window.open("https://www.opensubtitles.org/en/search2/sublanguageid-eng/moviename-"
                   + encodeURIComponent(searchInput.value))
       return false
     }
